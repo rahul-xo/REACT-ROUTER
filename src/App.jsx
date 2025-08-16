@@ -5,6 +5,7 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Home from "./pages/Home";
 import ErrorPage from "./pages/ErrorPage";
+import { FetchAPI } from "./API/FetchAPI";
 
 
 
@@ -25,7 +26,8 @@ const App = () => {
         },
         {
           path:"/about",
-          element: <About/>
+          element: <About/>,
+          loader: FetchAPI
         },
       ]
     }
