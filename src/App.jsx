@@ -2,7 +2,7 @@ import React from "react";
 import { createBrowserRouter, RouterProvider } from "react-router";
 import AppUi from "./components/layout/AppUi";
 import About from "./pages/About";
-import Contact from "./pages/Contact";
+import Contact, { handleSubmit } from "./pages/Contact";
 import Home from "./pages/Home";
 import ErrorPage from "./pages/ErrorPage";
 import { FetchAPI } from "./API/FetchAPI";
@@ -23,6 +23,7 @@ const App = () => {
         {
           path:"/contact",
           element: <Contact/>,
+          action: handleSubmit
         },
         {
           path:"/about",
